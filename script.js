@@ -1,3 +1,38 @@
+// Fixed navbar
+$(window).on("scroll", function(){
+  if($(this).scrollTop() > 0){
+      $("body").addClass("fixed-navbar");
+  }else{
+      $("body").removeClass("fixed-navbar");
+  }
+});
+
+
+//Menu
+$('.toggle-menu').on('click', function(){
+  $('body').toggleClass('menu-is-open');
+});
+
+
+// Lazy BG
+let lazy_bg_loaded = false;
+function loadLazyBg(){
+  if($(window).scrollTop() > 0){
+      lazy_bg_loaded = true;
+      $("body").addClass('load-lazy-bg');
+  }
+}
+
+loadLazyBg();
+
+$(window).on("scroll", function(){
+  if(!lazy_bg_loaded){
+      loadLazyBg();
+  }
+});
+
+
+
 function moveVideo(position) {
   position >= 100 && (position = 99);
   let video = document.getElementById("home-pricing-calc-video"),
