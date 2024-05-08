@@ -1198,3 +1198,16 @@ body:not(.load-lazy-bg) .wait-lazy-bg {
     grid-template-columns: 5fr 3fr;
   }
 }
+
+@media (max-width: 480px) {
+  .pricing-comparison-list .pricing-comparison-list-item-bar {
+    display: none !important;
+  }
+  .pricing-comparison-list .pricing-comparison-list-item-bar.mobile_views {
+    display: block !important;
+    font-size: 17px;
+  }
+  .pricing-comparison-list-item {
+    display: block;
+  }
+}
